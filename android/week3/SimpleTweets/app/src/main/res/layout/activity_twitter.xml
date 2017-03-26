@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.codepath.apps.SimpleTweets.activities.TwitterActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/toolbarLayout"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_twitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/toolbarLayout" />
+
+    <android.support.design.widget.FloatingActionButton
+        app:srcCompat="@drawable/tweet_tab_icon"
+        android:id="@+id/floatingActionBar"
+       app:fabSize="normal"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:layout_anchorGravity="bottom|right|end"
+        app:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</android.support.design.widget.CoordinatorLayout>
